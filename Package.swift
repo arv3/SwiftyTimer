@@ -1,8 +1,18 @@
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
 	name: "SwiftyTimer",
+    products: [
+        .library(
+            name: "SwiftyTimer",
+            targets: ["SwiftyTimer"]),
+    ],
 	dependencies: [],
-    exclude: ["Sources/Info.plist", "Sources/SwiftyTimer.h", "SwiftyTimerTests"]
-    
+    targets: [
+        .target(
+            name: "SwiftyTimer",
+            dependencies: [],
+            path: "Sources")
+	]
 )
